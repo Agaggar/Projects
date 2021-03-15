@@ -1,0 +1,7 @@
+int32 duration   # The time (in seconds) during which robot will drive
+---
+float32 power    # The power (0-100) the throttle will run
+---
+float32 angle    # The angle (-1 1) the steering will turn
+---
+bool success      # Did it achieve it?

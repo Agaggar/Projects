@@ -1,0 +1,32 @@
+IMPORTANT: Before training on the GPU cluster, make sure to rsync the myconfig file
+
+The following trials have been done on the indoor track:
+trial1 - first 20 laps done on original camera angle
+trial2 - next set of data to optimize first 20
+
+--- the above data sets and AI models kept swerving hard right, so the next trials were done with a less sharp camera angle (more range) ---
+
+trial3 - first 20 laps on new camera angle
+trial4 - updated model with more data - still shaky on several turns
+trial5 - more data with clean laps. Model is kind of able to complete laps autonomously, with careful supervision on two sharp turns
+ayush1 - trained data by ayush on 2.10
+ayush2 - moved chairs and cones for more robust model
+
+--- the combo AI models were taken by stitching together previous AI models
+
+combo1 - combines trial3 and trial4
+combo2 - combines trial5 with combo1, in other words, this model combines trial3, trial4, and trial5 AI model
+combo3 - adds corner data to combo2 AI model
+combo4 - combines ayush data sets with combo3
+
+Current: combo2 is the culmination of all sets of good data. 
+The turns to watch out for are the one in the back left corner and frontmost right corner of the tent.
+The myconfig file is set to a low AI throttle speed of 0.72 to help the model make turns.
+
+--- NEW WORKING MODEL FOR INDOOR TRACK ---
+
+data and AI models both are named the following:
+- indoor_new1 - this is the first 10-20 laps done
+- indoor_new2 - focuses on corner difficulties
+
+current working AI model is indoor_new2, and works at 0.90 throttle multiplier.

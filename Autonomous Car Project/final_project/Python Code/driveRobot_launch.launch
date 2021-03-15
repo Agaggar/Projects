@@ -1,0 +1,4 @@
+<launch>
+    <!-- Start Service Server for driveRobotTest service -->
+    <node pkg="ucsd_robo_car_simple_ros" type="drive_server.py" name="service_driveRobot_server"  output="screen">
+    </node>
